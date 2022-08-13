@@ -3,9 +3,7 @@ import styled from 'styled-components';
 
 type Props = {
   type: 'vite' | 'react';
-  src: string;
-  alt?: string;
-};
+} & React.ImgHTMLAttributes<HTMLImageElement>;
 
 const Container = styled.img<{ type: 'vite' | 'react' }>`
   height: 6em;

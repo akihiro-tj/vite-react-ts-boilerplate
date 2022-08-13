@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type Props = {
-  children?: string | number | JSX.Element | JSX.Element[];
-};
+type Props = React.HTMLAttributes<HTMLDivElement>;
 
 const Container = styled.div`
   padding: 2em;
