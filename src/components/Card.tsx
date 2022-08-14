@@ -7,8 +7,8 @@ const Container = styled.div`
   padding: 2em;
 `;
 
-const Card: React.FC<Props> = ({ children }) => {
-  return <Container>{children}</Container>;
+const Card: React.FC<Props> = props => {
+  return <Container {...props} />;
 };
 
 export default Card;

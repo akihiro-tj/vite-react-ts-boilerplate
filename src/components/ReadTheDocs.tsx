@@ -7,8 +7,8 @@ const Container = styled.div`
   color: #888;
 `;
 
-const ReadTheDocs: React.FC<Props> = ({ children }) => {
-  return <Container>{children}</Container>;
+const ReadTheDocs: React.FC<Props> = props => {
+  return <Container {...props}></Container>;
 };
 
 export default ReadTheDocs;
