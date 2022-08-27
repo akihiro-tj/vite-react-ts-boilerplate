@@ -3,15 +3,14 @@ import styled from 'styled-components';
 
 export type Logo = {
   href: string;
-} & SLogo &
-  React.ImgHTMLAttributes<HTMLImageElement>;
-
-type SLogo = {
   shadowColor: string;
   isRotating?: boolean;
-};
+} & React.ImgHTMLAttributes<HTMLImageElement>;
 
-const SLogo = styled.img<SLogo>`
+const SLogo = styled.img<{
+  shadowColor: string;
+  isRotating?: boolean;
+}>`
   height: 6em;
   padding: 1.5em;
   will-change: filter;
