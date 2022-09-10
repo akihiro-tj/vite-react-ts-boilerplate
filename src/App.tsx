@@ -8,6 +8,9 @@ export const SApp = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+
+  font-family: var(--font-family);
+  color: var(--color-text);
   text-align: center;
 `;
 
