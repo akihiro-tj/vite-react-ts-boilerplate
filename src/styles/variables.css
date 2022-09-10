@@ -1,6 +1,7 @@
 :root {
   --font-family: Inter, 'Noto Sans JP', sans-serif;
 
+  --color-text: #333;
   --color-vite-logo: #646cffaa;
   --color-react-logo: #61dafbaa;
 }

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Logo from './components/Logo';
 import { LOGO } from './constant';
 
-export const SApp = styled.div`
+const SApp = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
