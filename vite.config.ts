@@ -5,11 +5,21 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './',
+
   server: {
     port: 8000,
   },
-  base: './',
+
+  build: {
+    outDir: 'dist',
+  },
+
   css: {
+    modules: {
+      scopeBehaviour: 'local',
+      localsConvention: 'camelCaseOnly',
+    },
     postcss: {
       plugins: [autoprefixer],
     },
