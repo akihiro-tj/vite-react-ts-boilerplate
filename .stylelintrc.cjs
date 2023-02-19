@@ -14,5 +14,10 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': [true, prettierOptions],
+    'scss/dollar-variable-pattern': null,
+    'custom-property-pattern': null,
+    'selector-class-pattern': null,
+    'selector-pseudo-class-no-unknown': null,
+    'block-no-empty': null,
   },
 };
