@@ -18,7 +18,7 @@
   "scss.validate": false,
   "stylelint.validate": ["css", "scss"],
 
-  "[javascript][typescript][javascriptreact][typescriptreact]": {
+  "[javascript][typescript][javascriptreact][typescriptreact][jsx][tsx]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
