@@ -1,7 +1,7 @@
 import { FC, MouseEventHandler, useContext } from 'react';
 
-import { AppContext, AppUpdateContext } from './AppContext';
-import { updateCount } from './reducer';
+import { AppContext, AppUpdateContext } from './providers/AppContext';
+import { updateCount } from './providers/reducer';
 import './styles/index.scss';
 
 export const App: FC = () => {
