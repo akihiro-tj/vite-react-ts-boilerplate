@@ -4,7 +4,7 @@ import { AppContext, AppUpdateContext } from './providers/AppContext';
 import { updateCount } from './providers/reducer';
 import './styles/index.scss';
 
-export const App: FC = () => {
+const App: FC = () => {
   const { count } = useContext(AppContext);
   const dispatch = useContext(AppUpdateContext);
 
@@ -20,3 +20,5 @@ export const App: FC = () => {
     </div>
   );
 };
+
+export default App;
