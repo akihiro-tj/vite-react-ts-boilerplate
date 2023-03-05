@@ -1,4 +1,4 @@
-# Vite-React-TypeScript
+# Vite-React-TypeScript Boilerplate
 
 ## Setup
 
@@ -6,7 +6,7 @@
 $ yarn
 ```
 
-## Develop
+## Development
 
 ```bash
 $ yarn dev
