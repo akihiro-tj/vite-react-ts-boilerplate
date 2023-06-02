@@ -9,7 +9,6 @@ const App: FC = () => {
   const dispatch = useContext(AppUpdateContext);
 
   const handleIncrement: MouseEventHandler<HTMLButtonElement> = () => {
-    if (!dispatch) return;
     dispatch(updateCount(count + 1));
   };
 
