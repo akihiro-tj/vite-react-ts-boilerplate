@@ -1,6 +1,6 @@
 import { FC, MouseEventHandler, useContext } from 'react';
 
-import { AppContext, AppUpdateContext } from './providers/AppContext';
+import { AppContext, AppUpdateContext } from './providers/AppContextProvider';
 import { updateCount } from './providers/reducer';
 import './styles/index.scss';
 
