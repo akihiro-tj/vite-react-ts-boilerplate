@@ -1,8 +1,10 @@
+import { Action } from '../types';
+
 export type AppState = {
   count: number;
 };
 
-export const initialState: AppState = {
+export const initialAppState: AppState = {
   count: 0,
 };
 
@@ -17,15 +19,13 @@ export const updateCount = (count: number) => {
   };
 };
 
-export type Action = ReturnType<typeof updateCount>;
-
 // Reducer
-export const reducer = (state: AppState, action: Action): AppState => {
+export const appReducer = (state: AppState, action: Action): AppState => {
   switch (action.type) {
     case UPDATE_COUNT: {
       return {
         ...state,
-        count: action.payload as number,
+        count: action.payload,
       };
     }
 
