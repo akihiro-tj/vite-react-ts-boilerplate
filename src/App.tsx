@@ -4,7 +4,7 @@ import {
   AppContext,
   AppUpdateContext,
 } from './providers/app/AppContextProvider';
-import { updateCount } from './providers/App/appReducer';
+import { updateCount } from './providers/app/appReducer';
 import './styles/index.scss';
 
 const App: FC = () => {
