@@ -3,7 +3,7 @@ import { FC, MouseEventHandler, useContext } from 'react';
 import {
   AppContext,
   AppUpdateContext,
-} from './providers/App/AppContextProvider';
+} from './providers/app/AppContextProvider';
 import { updateCount } from './providers/App/appReducer';
 import './styles/index.scss';
 
