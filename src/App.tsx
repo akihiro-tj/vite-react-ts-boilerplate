@@ -1,25 +1,18 @@
-import { FC, MouseEventHandler, useContext } from 'react';
+import { FC } from 'react';
 
-import {
-  AppContext,
-  AppUpdateContext,
-} from './providers/app/AppContextProvider';
-import { updateCount } from './providers/app/appReducer';
-import './styles/index.scss';
+import Button from './components/Button';
+import Panel from './components/Panel';
+import { useApp } from './hooks/useApp';
 
 const App: FC = () => {
-  const { count } = useContext(AppContext);
-  const dispatch = useContext(AppUpdateContext);
-
-  const handleIncrement: MouseEventHandler<HTMLButtonElement> = () => {
-    dispatch(updateCount(count + 1));
-  };
+  const { count, handleDecrement, handleIncrement } = useApp();
 
   return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={handleIncrement}>+</button>
-    </div>
+    <>
+      <Panel value={count} />
+      <Button onClick={handleDecrement}>-</Button>
+      <Button onClick={handleIncrement}>+</Button>
+    </>
   );
 };
 

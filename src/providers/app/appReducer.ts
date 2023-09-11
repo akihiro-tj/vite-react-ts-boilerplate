@@ -12,10 +12,11 @@ export const initialAppState: AppState = {
 const UPDATE_COUNT = 'UPDATE_COUNT';
 
 // Actions
-export const updateCount = (count: number) => {
+type UpdateCountCallback = (prev: number) => number;
+export const updateCount = (payload: number | UpdateCountCallback) => {
   return {
     type: UPDATE_COUNT,
-    payload: count,
+    payload,
   };
 };
 
@@ -23,9 +24,14 @@ export const updateCount = (count: number) => {
 export const appReducer = (state: AppState, action: Action): AppState => {
   switch (action.type) {
     case UPDATE_COUNT: {
+      const count =
+        typeof action.payload === 'function'
+          ? (action.payload as UpdateCountCallback)(state.count)
+          : (action.payload as number);
+
       return {
         ...state,
-        count: action.payload,
+        count,
       };
     }
 

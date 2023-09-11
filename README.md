@@ -20,12 +20,6 @@ http://localhost:8000/
 $ yarn build
 ```
 
-## Test
-
-```bash
-$ yarn test
-```
-
 ## Lint
 
 ```bash
