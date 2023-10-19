@@ -18,7 +18,7 @@
     "fix:eslint": "eslint src --fix",
     "fix:stylelint": "stylelint \"src/**/*.{css,scss}\" --fix",
     "fix:prettier": "prettier --write *.{md,json}",
-    "latest": "yarn upgrade-interactive --latest"
+    "latest": "pnpm update --latest --interactive"
   },
   "dependencies": {
     "clsx": "^1.2.1",

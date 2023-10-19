@@ -3,13 +3,13 @@
 ## Setup
 
 ```bash
-$ yarn
+$ pnpm install
 ```
 
 ## Development
 
 ```bash
-$ yarn dev
+$ pnpm run dev
 ```
 
 http://localhost:8000/
@@ -17,11 +17,11 @@ http://localhost:8000/
 ## Build
 
 ```bash
-$ yarn build
+$ pnpm run build
 ```
 
 ## Lint
 
 ```bash
-$ yarn fix
+$ pnpm run fix
 ```

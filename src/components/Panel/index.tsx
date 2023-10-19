@@ -1,11 +1,9 @@
-import { FC } from 'react';
-
 type PanelProps = {
   className?: string;
   value: number;
 };
 
-const Panel: FC<PanelProps> = ({ className, value }) => {
+const Panel = ({ className, value }: PanelProps) => {
   return <div className={className}>Count: {value}</div>;
 };
 

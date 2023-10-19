@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { FC, MouseEventHandler, ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 
 import style from './style.module.scss';
 
@@ -9,7 +9,7 @@ type ButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
-const Button: FC<ButtonProps> = ({ className, children, onClick }) => {
+const Button = ({ className, children, onClick }: ButtonProps) => {
   return (
     <button className={clsx(className, style.button)} onClick={onClick}>
       {children}

@@ -1,5 +1,3 @@
-import { Action } from '../../types';
-
 export type AppState = {
   count: number;
 };
@@ -9,25 +7,20 @@ export const initialAppState: AppState = {
 };
 
 // Action types
-const UPDATE_COUNT = 'UPDATE_COUNT';
-
-// Actions
-type UpdateCountCallback = (prev: number) => number;
-export const updateCount = (payload: number | UpdateCountCallback) => {
-  return {
-    type: UPDATE_COUNT,
-    payload,
-  };
+export type ActionType = {
+  type: 'UPDATE_COUNT';
+  payload: number | UpdateCountCallback;
 };
+type UpdateCountCallback = (prev: number) => number;
 
 // Reducer
-export const appReducer = (state: AppState, action: Action): AppState => {
+export const appReducer = (state: AppState, action: ActionType): AppState => {
   switch (action.type) {
-    case UPDATE_COUNT: {
+    case 'UPDATE_COUNT': {
       const count =
         typeof action.payload === 'function'
-          ? (action.payload as UpdateCountCallback)(state.count)
-          : (action.payload as number);
+          ? action.payload(state.count)
+          : action.payload;
 
       return {
         ...state,
