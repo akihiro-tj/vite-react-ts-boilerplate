@@ -4,8 +4,8 @@ import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
   base: './',
+  plugins: [react()],
 
   server: {
     port: 8000,
@@ -22,12 +22,12 @@ export default defineConfig({
     },
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "./src/styles/shared";',
+        additionalData: '@import "/src/styles/shared";',
         includePaths: ['src/styles'],
       },
     },
     postcss: {
-      plugins: [autoprefixer as any],
+      plugins: [autoprefixer()],
     },
   },
 });
