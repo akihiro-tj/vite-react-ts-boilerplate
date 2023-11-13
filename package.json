@@ -14,10 +14,10 @@
     "build:vite": "vite build",
     "preview": "vite preview",
     "lint": "run-s lint:*",
-    "lint:eslint": "eslint src",
+    "lint:eslint": "eslint .",
     "lint:stylelint": "stylelint \"src/**/*.{css,scss}\"",
     "fix": "run-s fix:*",
-    "fix:eslint": "eslint src --fix",
+    "fix:eslint": "eslint . --fix",
     "fix:stylelint": "stylelint \"src/**/*.{css,scss}\" --fix",
     "fix:prettier": "prettier --write *.{md,json}",
     "latest": "pnpm update --latest --interactive"
