@@ -22,7 +22,7 @@ export default defineConfig({
     },
     preprocessorOptions: {
       scss: {
-        additionalData: '@use "/src/styles/shared";',
+        additionalData: '@use "/src/styles/preprocess";',
         includePaths: ['/src/styles'],
       },
     },
