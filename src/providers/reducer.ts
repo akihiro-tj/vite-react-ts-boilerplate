@@ -7,10 +7,13 @@ export const initialAppState: AppState = {
 };
 
 // Action types
-export type ActionType = {
-  type: 'UPDATE_COUNT';
-  payload: number | UpdateCountCallback;
-};
+export type ActionType =
+  | {
+      type: 'UPDATE_COUNT';
+      payload: number | UpdateCountCallback;
+    }
+  | { type: 'INCREMENT_COUNT' }
+  | { type: 'DECREMENT_COUNT' };
 type UpdateCountCallback = (prev: number) => number;
 
 // Reducer
@@ -22,10 +25,15 @@ export const appReducer = (state: AppState, action: ActionType): AppState => {
           ? action.payload(state.count)
           : action.payload;
 
-      return {
-        ...state,
-        count,
-      };
+      return { ...state, count };
+    }
+
+    case 'INCREMENT_COUNT': {
+      return { ...state, count: state.count + 1 };
+    }
+
+    case 'DECREMENT_COUNT': {
+      return { ...state, count: state.count - 1 };
     }
 
     default: {

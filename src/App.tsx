@@ -1,29 +1,39 @@
 import { MouseEventHandler, useCallback } from 'react';
 
 import Button from './components/Button';
-import Panel from './components/Panel';
-import { useAppContext, useAppDispatch } from './providers/app/AppContext';
+import AppProvider, {
+  useAppContext,
+  useAppDispatch,
+} from './providers/context';
 
-const App = () => {
+const Content = () => {
   const { count } = useAppContext();
   const dispatch = useAppDispatch();
 
   const handleDecrement: MouseEventHandler<HTMLButtonElement> =
     useCallback(() => {
-      dispatch({ type: 'UPDATE_COUNT', payload: prev => prev - 1 });
+      dispatch({ type: 'DECREMENT_COUNT' });
     }, [dispatch]);
 
   const handleIncrement: MouseEventHandler<HTMLButtonElement> =
     useCallback(() => {
-      dispatch({ type: 'UPDATE_COUNT', payload: prev => prev + 1 });
+      dispatch({ type: 'INCREMENT_COUNT' });
     }, [dispatch]);
 
   return (
     <>
-      <Panel value={count} />
+      <div>Count: {count}</div>
       <Button onClick={handleDecrement}>-</Button>
       <Button onClick={handleIncrement}>+</Button>
     </>
+  );
+};
+
+const App = () => {
+  return (
+    <AppProvider>
+      <Content />
+    </AppProvider>
   );
 };
 

@@ -9,7 +9,7 @@ $ pnpm install
 ## Development
 
 ```bash
-$ pnpm run dev
+$ pnpm dev
 ```
 
 http://localhost:8000/
@@ -17,11 +17,11 @@ http://localhost:8000/
 ## Build
 
 ```bash
-$ pnpm run build
+$ pnpm build
 ```
 
 ## Lint
 
 ```bash
-$ pnpm run fix
+$ pnpm fix
 ```

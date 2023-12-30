@@ -6,12 +6,7 @@ import {
   useReducer,
 } from 'react';
 
-import {
-  AppState,
-  initialAppState,
-  appReducer,
-  ActionType,
-} from './appReducer';
+import { AppState, initialAppState, appReducer, ActionType } from './reducer';
 
 type AppProviderProps = {
   children: ReactNode;
