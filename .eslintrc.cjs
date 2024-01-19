@@ -7,20 +7,18 @@ const prettierOptions = JSON.parse(
 
 module.exports = {
   extends: [
+    'plugin:import/recommended',
+    'plugin:import/typescript',
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
     'prettier',
   ],
-  plugins: ['@typescript-eslint', 'import', 'prettier'],
+  plugins: ['prettier'],
   parser: '@typescript-eslint/parser',
   rules: {
-    'prettier/prettier': ['error', prettierOptions],
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
     'import/order': [
       'warn',
       {
@@ -40,6 +38,10 @@ module.exports = {
         pathGroups: [],
       },
     ],
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    'prettier/prettier': ['error', prettierOptions],
   },
   settings: {
     react: {
