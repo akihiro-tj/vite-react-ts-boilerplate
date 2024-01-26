@@ -1,4 +1,4 @@
-import { FunctionComponent, MouseEventHandler, ReactNode } from 'react';
+import { FC, MouseEventHandler, ReactNode } from 'react';
 
 import styles from './style.module.scss';
 
@@ -7,7 +7,7 @@ type ButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
-const Button: FunctionComponent<ButtonProps> = ({ children, onClick }) => {
+const Button: FC<ButtonProps> = ({ children, onClick }) => {
   return (
     <button className={styles.button} onClick={onClick}>
       {children}

@@ -1,10 +1,10 @@
-import { FunctionComponent } from 'react';
+import { FC } from 'react';
 
 import Button from '../../components/Button';
 
 import useApp from './hooks';
 
-const App: FunctionComponent = () => {
+const App: FC = () => {
   const { count, handleDecrement, handleIncrement } = useApp();
 
   return (
